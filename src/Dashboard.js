@@ -50,7 +50,7 @@ export default function Dashboard({code}) {
     //put the current user in the already existing group session with that security code id
     function createPlaylist() {
         console.log(seshCode)
-        axios.post('http://localhost:3001/createPlaylist', {seshCode, email,})
+        axios.post('https://playlist-blender-server.herokuapp.com/createPlaylist', {seshCode, email,})
         alert("Your playlist has been created successfully!");
 
         //add code in to server to delete session
@@ -64,7 +64,7 @@ export default function Dashboard({code}) {
             clearInterval(interval);
 
             //post call to remove current user from previous session
-            axios.post('http://localhost:3001/removeUser', {seshCode, email,})
+            axios.post('https://playlist-blender-server.herokuapp.com/removeUser', {seshCode, email,})
 
         }
 
@@ -79,7 +79,7 @@ export default function Dashboard({code}) {
         //if interval already has a value, clear it 
         //then set interval for 10 seconds and a method that updates the
         //list in the ui with new members if any    
-        setIntervalVar(setInterval(() => {axios.post('http://localhost:3001/sessionUpdate', {tempSeshCode, email,}).then(res => {
+        setIntervalVar(setInterval(() => {axios.post('https://playlist-blender-server.herokuapp.com/sessionUpdate', {tempSeshCode, email,}).then(res => {
             //console.log(res.data.sessionMembers)
             //console.log(tempSeshCode)
             //console.log(res.data.sessionMembersDisplay[0])
@@ -128,7 +128,7 @@ export default function Dashboard({code}) {
             //console.log(seshCode)
             //console.log(email)
             
-            axios.post('http://localhost:3001/sessionUpdate', {seshCode, email,}).then(res => {
+            axios.post('https://playlist-blender-server.herokuapp.com/sessionUpdate', {seshCode, email,}).then(res => {
                 
                 //console.log(res.data.sessionMembersDisplay[0])
 
