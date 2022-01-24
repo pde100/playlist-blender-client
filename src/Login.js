@@ -3,7 +3,7 @@ import "./styles.css";
 
 
 
-const AUTH_URL = "https://accounts.spotify.com/authorize?client_id=39d8915cc7ae447fab2f74010195ab7f&response_type=code&redirect_uri=http://localhost:3000/&scope=user-library-modify%20user-library-read%20user-read-email%20user-top-read%20user-read-recently-played%20playlist-modify-private%20playlist-read-collaborative%20playlist-read-private%20playlist-modify-public";
+const AUTH_URL = "https://accounts.spotify.com/authorize?client_id=39d8915cc7ae447fab2f74010195ab7f&response_type=code&redirect_uri=https://playlist-blender-client.herokuapp.com/&scope=user-library-modify%20user-library-read%20user-read-email%20user-top-read%20user-read-recently-played%20playlist-modify-private%20playlist-read-collaborative%20playlist-read-private%20playlist-modify-public";
 
 
 export default function Login() {
