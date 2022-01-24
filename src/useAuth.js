@@ -14,7 +14,7 @@ export default function useAuth(code) {
 
     useEffect(() => {
             axios
-            .post('http://localhost:3001/login', {code}).then(res => {
+            .post('https://playlist-blender-server.herokuapp.com/login', {code}).then(res => {
                 window.history.pushState({}, null, '/')
                 setAccessToken(res.data.accessToken)
                 setRefreshToken(res.data.refreshToken)
@@ -33,7 +33,7 @@ export default function useAuth(code) {
         const interval = setInterval(() => {
 
             axios
-            .post('http://localhost:3001/refresh', {
+            .post('https://playlist-blender-server.herokuapp.com/refresh', {
                 refreshToken,
             })
             .then(res => {
