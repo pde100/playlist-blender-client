@@ -25,6 +25,7 @@ export default function useAuth(code) {
                 }).catch((err) => {
                     window.location = '/'
                     console.log(err)
+                    console.log("please man")
 
                 })
     },      [code])
