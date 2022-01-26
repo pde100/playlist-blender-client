@@ -22,8 +22,10 @@ export default function useAuth(code) {
                 setUserEmail(res.data.userEmail)
                 setUserName(res.data.displayname)
                 setPFP(res.data.pfp)
-                }).catch(() => {
+                }).catch((err) => {
                     window.location = '/'
+                    console.log(err)
+
                 })
     },      [code])
 
