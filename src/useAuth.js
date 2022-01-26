@@ -23,7 +23,7 @@ export default function useAuth(code) {
                 setUserName(res.data.displayname)
                 setPFP(res.data.pfp)
                 }).catch((err) => {
-                    window.location = '/'
+                    //window.location = '/'
                     console.log(err)
                     console.log("please man")
 
